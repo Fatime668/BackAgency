@@ -1,0 +1,21 @@
+﻿@model Portfolio
+<div>
+    <div>
+        <p>Id:</p>
+        <p>@Model.Id</p>
+    </div>
+    <div>
+        <p>Title:</p>
+        <p>@Model.Title</p>
+    </div>
+    <div>
+        <p>Subtitle:</p>
+        <p>@Model.Subtitle</p>
+    </div>
+    <div class="my-3">
+        <img src="~/assets/images/@Model.Image" style="width:150px" />
+    </div>
+    <form method="post">
+        <button class="btn btn-outline-danger" type="submit">Delete</button>
+    </form>
+</div>

@@ -1,0 +1,147 @@
+﻿@model HomeVM
+<main>
+    <section id="agency">
+        <div class="container">
+            <div class="title">
+                <span>Welcome To Our Studio!</span>
+                <h1>IT'S NICE TO MEET YOU</h1>
+                <div class="tell">
+                    <a href="#">tell me more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service start -->
+    <section id="service">
+        <div class="container">
+            <div class="title">
+                <h2>SERVICES</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="txt">
+                            <h4>E-Commerce</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="fa-solid fa-display"></i>
+                        </div>
+                        <div class="txt">
+                            <h4>Responsive Design</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="service-item">
+                        <div class="icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="txt">
+                            <h4>Web Security</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service end -->
+    <!-- Portfolio start -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="title text-center">
+                <h2>PORTFOLIO</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="row">
+                @foreach (Portfolio portfolio in Model.Portfolios)
+                {
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="portfolio-item">
+                            <div class="img">
+                                <div class="bg-color">
+                                </div>
+                                <img src="~/assets/images/@portfolio.Image" alt="">
+                                <div class="icon">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+                            </div>
+                            <div class="txt">
+                                <h4>@portfolio.Title</h4>
+                                <span>@portfolio.Subtitle</span>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio end -->
+    <section id="logo">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2">
+                    <img src="~/assets/images/brands/creative-market.jpg" alt="">
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2">
+                    <img src="~/assets/images/brands/designmodo.jpg" alt="">
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2">
+                    <img src="~/assets/images/brands/envato.jpg" alt="">
+                </div>
+                <div class="col-6 col-sm-6 col-md-2 col-lg-2">
+                    <img src="~/assets/images/brands/themeforest.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact start -->
+    <section id="contact">
+        <div class="container">
+            <div class="title">
+                <h2>CONTACT US</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <div class="form">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <form action="">
+                            <div>
+                                <input class="form-control" type="text" placeholder="Your Name*">
+                            </div>
+                            <div class="my-3">
+                                <input class="form-control" type="text" placeholder="Your Email*">
+                            </div>
+                            <div>
+                                <input class="form-control" type="text" placeholder="Your Phone*">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <form action="">
+                            <div>
+                                <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="send text-center my-5">
+                    <a href="#">Send Message</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact end -->
+
+</main>

@@ -1,0 +1,22 @@
+﻿@model Portfolio
+<div class="alert alert-danger" asp-validation-summary="ModelOnly"></div>
+<form method="post" enctype="multipart/form-data">
+    <div>
+        <label>Title:</label>
+        <input asp-for="Title" class="form-control" /><br />
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+    <div>
+        <label>Subtitle:</label>
+        <input asp-for="Subtitle" class="form-control" /><br />
+        <span class="text-danger" asp-validation-for="Subtitle"></span>
+    </div>
+    <div>
+        <label>Title:</label>
+        <input asp-for="Photo" accept="image/*" class="form-control" /><br />
+        <span class="text-danger" asp-validation-for="Photo"></span>
+    </div>
+    <div>
+        <button class="btn btn-lg btn-outline-primary" type="submit">Create</button>
+    </div>
+</form>

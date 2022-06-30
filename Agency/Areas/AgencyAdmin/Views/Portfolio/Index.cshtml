@@ -1,0 +1,61 @@
+﻿@model List<Portfolio>
+<div class="card">
+    <div class="card-body">
+        <div class="my-2">
+            <a asp-controller="portfolio" asp-action="create" class="btn btn-lg btn-outline-dark">Create</a>
+        </div>
+        <div class="table-responsive pt-3">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Subtitle
+                        </th>
+                        <th>
+                            Image
+                        </th>
+                        <th>
+                            Settings
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @item.Id
+                            </td>
+                            <td>
+                                @item.Title
+                            </td>
+                            <td>
+                                @item.Subtitle
+                            </td>
+                            <td>
+                                <img src="~/assets/images/@item.Image" />
+                            </td>
+                            <td class="d-flex">
+                                <div>
+                                    <a asp-controller="portfolio" asp-action="detail" class="btn btn-primary" asp-route-id="@item.Id">Detail</a>
+                                </div>
+                                <div class="mx-3">
+                                    <a asp-controller="portfolio" asp-action="edit" class="btn btn-warning" asp-route-id="@item.Id">Edit</a>
+                                </div>
+                                <div class="mx-3">
+                                    <a asp-controller="portfolio" asp-action="delete" class="btn btn-danger" asp-route-id="@item.Id">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
